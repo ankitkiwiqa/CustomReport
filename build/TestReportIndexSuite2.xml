@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestReport2" verbose="10" parallel="tests" thread-count="1">
+
+	<!-- Put IP of localhost/Grid Hub machine -->
+	<parameter name="selenium.host" value="localhost" />
+
+	<!-- Put Port of localhost RC/Grid Hub machine -->
+	<parameter name="selenium.port" value="4444" />
+
+	<!-- Put target browser name as below: 1) Firefox : firefox 2) chrome : 
+		chrome 3) IExplorer : ie8 / ie9 -->
+	<parameter name="selenium.browser" value="chrome" />
+	<!-- <parameter name="selenium.url" value="http://google.com" /> -->
+
+<!-- 	<listeners>
+	<listener class-name="com.owls.utility.RetryTestListener" />
+	<listener class-name="com.owls.utility.RetryConterManagerListener" />
+	<listener class-name="com.owls.utility.CustomReporter" />
+</listeners> -->
+
+<listeners>
+     <!--  <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/> -->
+     <listener class-name="com.testReport.utility.CustomReporterTestDetails" />
+       <listener class-name="com.testReport.utility.CustomReporterTestFailureDetails" />
+  </listeners>
+    
+	<test name="TC_Portal_001: To verify that user is able to submite application to OWLS portal.">
+		<classes>
+			<class name="com.testReport.TestNGreport">
+				<methods>
+					<include name="test1" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_CRM_001: To verify submitted Application task status for application having Convictions, document uploded and wildlife possession.">
+		<classes>
+			<class name="com.testReport.TestNGreport">
+				<methods>
+					<include name="test2" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+ 	<test name="TC_CRM_002: To verify online User submits a basic application with a condition which will trigger review of the application.">
+		<classes>
+			<class name="com.testReport.TestNGreport">
+				<methods>
+					<include name="test3" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	<test name="TC_CRM_003: To verify submitted Application's 'Interview/Site Inspection' task and it should be wildlife licensing queue and inspecting screen should be visibile to the role - Manager wildlife licensing.">
+		<classes>
+			<class name="com.testReport.TestNGreport">
+				<methods>
+					<include name="test4" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	<test name="TC_CRM_005: To verify user can Complete Await Payment Confirmation Task and Permit Document PDF generated.">
+		<classes>
+			<class name="com.testReport.TestNGreport">
+				<methods>
+					<include name="test5" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+</suite>

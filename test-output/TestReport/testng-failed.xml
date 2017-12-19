@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="10" name="Failed suite [TestReport]" parallel="tests">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.testReport.utility.CustomReporterTestDetails"/>
+    <listener class-name="com.testReport.utility.CustomReporterTestFailureDetails"/>
+    <listener class-name="com.testReport.utility.CustomReporterTestpassDetails"/>
+  </listeners>
+  <test name="TC_Portal_001: To verify that user is able to submite application to OWLS portal.">
+    <classes>
+      <class name="com.testReport.TestNGreport">
+        <methods>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- com.testReport.TestNGreport -->
+    </classes>
+  </test> <!-- TC_Portal_001: To verify that user is able to submite application to OWLS portal. -->
+  <test name="TC_CRM_001: To verify submitted Application task status for application having Convictions, document uploded and wildlife possession.">
+    <classes>
+      <class name="com.testReport.TestNGreport">
+        <methods>
+          <include name="test2"/>
+        </methods>
+      </class> <!-- com.testReport.TestNGreport -->
+    </classes>
+  </test> <!-- TC_CRM_001: To verify submitted Application task status for application having Convictions, document uploded and wildlife possession. -->
+  <test name="TC_CRM_002: To verify online User submits a basic application with a condition which will trigger review of the application.">
+    <classes>
+      <class name="com.testReport.TestNGreport">
+        <methods>
+          <include name="test3"/>
+        </methods>
+      </class> <!-- com.testReport.TestNGreport -->
+    </classes>
+  </test> <!-- TC_CRM_002: To verify online User submits a basic application with a condition which will trigger review of the application. -->
+  <test name="TC_CRM_003: To verify submitted Application&#039;s &#039;Interview/Site Inspection&#039; task and it should be wildlife licensing queue and inspecting screen should be visibile to the role - Manager wildlife licensing.">
+    <classes>
+      <class name="com.testReport.TestNGreport">
+        <methods>
+          <include name="test4"/>
+        </methods>
+      </class> <!-- com.testReport.TestNGreport -->
+    </classes>
+  </test> <!-- TC_CRM_003: To verify submitted Application's 'Interview/Site Inspection' task and it should be wildlife licensing queue and inspecting screen should be visibile to the role - Manager wildlife licensing. -->
+  <test name="TC_CRM_005: To verify user can Complete Await Payment Confirmation Task and Permit Document PDF generated.">
+    <classes>
+      <class name="com.testReport.TestNGreport">
+        <methods>
+          <include name="test5"/>
+        </methods>
+      </class> <!-- com.testReport.TestNGreport -->
+    </classes>
+  </test> <!-- TC_CRM_005: To verify user can Complete Await Payment Confirmation Task and Permit Document PDF generated. -->
+  <test name="TC_CRM_002: To verify online User submits a basic application with a condition which will trigger review of the application.(failed)" parallel="tests">
+    <classes>
+      <class name="com.testReport.TestNGreport">
+        <methods>
+          <include name="test3"/>
+        </methods>
+      </class> <!-- com.testReport.TestNGreport -->
+    </classes>
+  </test> <!-- TC_CRM_002: To verify online User submits a basic application with a condition which will trigger review of the application.(failed) -->
+  <test name="TC_CRM_003: To verify submitted Application&#039;s &#039;Interview/Site Inspection&#039; task and it should be wildlife licensing queue and inspecting screen should be visibile to the role - Manager wildlife licensing.(failed)" parallel="tests">
+    <classes>
+      <class name="com.testReport.TestNGreport">
+        <methods>
+          <include name="test4"/>
+        </methods>
+      </class> <!-- com.testReport.TestNGreport -->
+    </classes>
+  </test> <!-- TC_CRM_003: To verify submitted Application's 'Interview/Site Inspection' task and it should be wildlife licensing queue and inspecting screen should be visibile to the role - Manager wildlife licensing.(failed) -->
+  <test name="TC_CRM_005: To verify user can Complete Await Payment Confirmation Task and Permit Document PDF generated.(failed)" parallel="tests">
+    <classes>
+      <class name="com.testReport.TestNGreport">
+        <methods>
+          <include name="test5"/>
+        </methods>
+      </class> <!-- com.testReport.TestNGreport -->
+    </classes>
+  </test> <!-- TC_CRM_005: To verify user can Complete Await Payment Confirmation Task and Permit Document PDF generated.(failed) -->
+</suite> <!-- Failed suite [TestReport] -->
